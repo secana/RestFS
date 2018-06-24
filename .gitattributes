@@ -1,0 +1,5 @@
+# Set auto settings for all text files.
+* text=auto
+
+# Set Linux line endings for all shell scripts.
+*.sh text eol=lf

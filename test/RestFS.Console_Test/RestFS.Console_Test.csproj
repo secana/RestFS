@@ -1,0 +1,133 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="LightBDD.XUnit2" Version="2.3.6" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.7.2" />
+    <PackageReference Include="Moq">
+      <Version>4.8.2</Version>
+    </PackageReference>
+    <PackageReference Include="Nancy.Testing" Version="2.0.0-clinteastwood" />
+    <PackageReference Include="xunit" Version="2.3.1" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.3.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\RestFS.Console\RestFS.Console.csproj">
+      <Project>{b9b63d5d-cdfd-418d-b89c-8e14bd248ec5}</Project>
+      <Name>CoreApp.Console</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{82a7f48d-3b50-4b1e-b82e-3ada8210c358}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Config\Config.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Config\Config.Steps.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="RestApi\CreateDirectory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="RestApi\CreateDirectory.Steps.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="RestApi\CreateFile.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="RestApi\CreateFile.Steps.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="RestApi\DeleteDirectory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="RestApi\DeleteDirectory.Steps.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="RestApi\DeleteFile.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="RestApi\DeleteFile.Steps.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="RestApi\DirectoryInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="RestApi\DirectoryInfo.Steps.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="RestApi\ReadFileInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="RestApi\ReadFileInfo.Steps.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="RestApi\ListDirectory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="RestApi\ListDirectory.Steps.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="RestApi\ReadFile.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="RestApi\ReadFile.Steps.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Storage\DeleteFile.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Storage\DeleteFile.Steps.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Storage\FileExists.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Storage\FileExists.Steps.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Storage\IsDirectory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Storage\IsDirectory.Steps.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Storage\ListDirectory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Storage\ListDirectory.Steps.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Storage\ReadFile.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Storage\ReadFile.Steps.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Storage\ReadFileAttributes.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Storage\ReadFileAttributes.Steps.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Storage\WriteFile.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Storage\WriteFile.Steps.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+</Project>
