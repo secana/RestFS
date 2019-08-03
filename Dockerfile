@@ -1,4 +1,4 @@
-FROM microsoft/dotnet:2.1.1-runtime-deps-alpine3.7
+FROM mcr.microsoft.com/dotnet/core/runtime-deps:3.0.0-preview7-alpine3.9
 
 COPY artifacts/RestFS.Console/ /data
 WORKDIR /data
