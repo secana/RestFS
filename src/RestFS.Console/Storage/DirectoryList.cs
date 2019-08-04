@@ -4,6 +4,6 @@ namespace RestFS.Console.Storage
 {
     public class DirectoryList
     {
-        public List<FileAttributes> Entries { get; set; }
+        public List<FileAttributes> Entries { get; } = new List<FileAttributes>();
     }
 }

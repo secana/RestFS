@@ -71,7 +71,7 @@ namespace RestFS.Console_Test.RestApi
         {
             return new DirectoryList
             {
-                Entries = new List<FileAttributes>
+                Entries =
                 {
                     new FileAttributes("file1.ext", 10, new DateTime(2018, 03, 08, 12, 13, 14), false),
                     new FileAttributes("dir1", 1, new DateTime(2018, 03, 08, 13, 14, 15), true)

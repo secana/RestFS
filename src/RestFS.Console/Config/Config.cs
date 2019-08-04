@@ -16,9 +16,9 @@ namespace RestFS.Console.Config
             ReadConfig(builder.Build());
         }
 
-        public string LoggerName    { get; private set; }
-        public string RootDirectory { get; private set; }
-        public string Uri           { get; private set; }
+        public string LoggerName    { get; private set; } = "RestFs";
+        public string RootDirectory { get; private set; } = "./";
+        public string Uri           { get; private set; } = "http://0.0.0.0:8080";
 
         private void ReadConfig(IConfiguration configuration)
         {

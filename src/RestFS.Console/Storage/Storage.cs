@@ -42,7 +42,7 @@ namespace RestFS.Console.Storage
         public async Task<DirectoryList> ListDirectoryAsync(string directory)
         {
             var fullPath   = SecurePathCombine(_rootDir, directory);
-            var dirListing = new DirectoryList {Entries = new List<FileAttributes>()};
+            var dirListing = new DirectoryList();
             var files      = Directory.GetFiles(fullPath);
             var dirs       = Directory.GetDirectories(fullPath);
              

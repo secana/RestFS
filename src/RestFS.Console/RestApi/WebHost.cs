@@ -11,7 +11,7 @@ namespace RestFS.Console.RestApi
         private readonly ILogger  _logger;
         private readonly IStorage _storage;
         private readonly string   _url;
-        private          IWebHost _webHost;
+        private          IWebHost? _webHost;
 
         public WebHost(
             ILogger logger,
@@ -45,8 +45,7 @@ namespace RestFS.Console.RestApi
 
         public void Start()
         {
-            if (_webHost == null)
-                _webHost = BuildWebHost(_url);
+            _webHost ??= BuildWebHost(_url);
             _webHost.Start();
         }
     }

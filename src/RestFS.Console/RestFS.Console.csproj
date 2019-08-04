@@ -2,7 +2,7 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.0</TargetFramework>
-    <Nullable>Enable</Nullable>
+    <Nullable>enable</Nullable>
     <Version>1.1.0</Version>
     <Authors>Stefan Hausotte</Authors>
     <Product>RestFS</Product>
@@ -13,6 +13,14 @@
     <RepositoryUrl>https://github.com/secana/RestFS</RepositoryUrl>
     <PackageTags>REST filesystem file-system CRUD</PackageTags>
     <LangVersion>8.0</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <WarningsAsErrors />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <WarningsAsErrors />
   </PropertyGroup>
   <ItemGroup>
     <None Update="appsettings.json">
