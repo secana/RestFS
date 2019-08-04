@@ -1,5 +1,5 @@
-#addin nuget:?package=Cake.Docker&version=0.9.4
-#addin nuget:?package=Cake.Figlet&version=1.1.0
+#addin nuget:?package=Cake.Docker&version=0.10.0
+#addin nuget:?package=Cake.Figlet&version=1.3.0
 
 var target = Argument("target", "Default");
 var testFailed = false;
