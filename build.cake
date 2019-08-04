@@ -84,6 +84,7 @@ Task("Build")
 
 
 Task("Test")
+	.IsDependentOn("PrepareDirectories")
 	.DoesForEach(GetTestProjectFiles(), (testProject) =>
 	{
 		var projectFolder = System.IO.Path.GetDirectoryName(testProject.FullPath);
@@ -139,7 +140,7 @@ Task("Publish")
 		{
 			OutputDirectory = outputDir,
 			Configuration = "Release",
-			Runtime = "alpine.3.7-x64"
+			Runtime = "alpine.3.9-x64"
 		};
 
 		DotNetCorePublish(project.FullPath, settings);
