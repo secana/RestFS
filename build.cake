@@ -127,6 +127,7 @@ Task("Pack")
 
 
 Task("Publish")
+	.IsDependentOn("Test")
 	.DoesForEach(GetSrcProjectFiles(), (project) => 
 	{
 		var projectDir = System.IO.Path.GetDirectoryName(project.FullPath);
