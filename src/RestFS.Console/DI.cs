@@ -18,9 +18,13 @@ namespace RestFS.Console
         {
             Container.Register(new Config.Config(args));
 
-            Container.Register(new LoggerFactory()
-                .AddConsole(LogLevel.Trace)
-                .CreateLogger(Container.Resolve<Config.Config>().LoggerName));
+            var logConfig = new Microsoft.Extensions.Logging.Console.ConsoleLoggerOptions();
+
+            Container.Register(
+                LoggerFactory.Create(builder => 
+                builder.AddConsole().
+                SetMinimumLevel(LogLevel.Trace)));
+                
 
             Container.Register<IStorage>(
                 new Storage.Storage(Container.Resolve<Config.Config>().RootDirectory));

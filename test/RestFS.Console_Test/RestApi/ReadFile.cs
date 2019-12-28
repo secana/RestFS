@@ -1,5 +1,5 @@
 ﻿using System;
-using LightBDD.Framework.Scenarios.Extended;
+using LightBDD.Framework.Scenarios;
 using LightBDD.XUnit2;
 using Nancy;
 using RestFS.Console.Storage;

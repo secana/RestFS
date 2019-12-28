@@ -1,4 +1,4 @@
-﻿using LightBDD.Framework.Scenarios.Extended;
+﻿using LightBDD.Framework.Scenarios;
 using LightBDD.XUnit2;
 
 namespace RestFS.Console_Test.Config
