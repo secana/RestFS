@@ -40,7 +40,7 @@ ___
 
 ## API Reference
 
-The API reference is created with [Swagger](www.swagger.io). The docu is exposed through the Swagger UI and the Swagger JSON description.
+The API reference is created with [Swagger](https://www.swagger.io). The docu is exposed through the Swagger UI and the Swagger JSON description.
 
 **API Docs**: `[your host and port]/api/v1/api-docs`
 
