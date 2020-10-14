@@ -42,7 +42,7 @@
     <PackageReference Include="Microsoft.AspNetCore.Owin" Version="3.1.9" />
     <PackageReference Include="Microsoft.AspNetCore.Server.Kestrel" Version="2.2.0" />
     <PackageReference Include="Microsoft.Extensions.Logging" Version="3.1.9" />
-    <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="3.1.8" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="3.1.9" />
     <PackageReference Include="Nancy" Version="2.0.0" />
     <PackageReference Include="Nancy.Swagger" Version="2.2.51-alpha" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
