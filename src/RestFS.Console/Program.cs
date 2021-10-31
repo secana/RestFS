@@ -23,7 +23,7 @@ namespace RestFS.Console
             Closing.WaitOne();
         }
 
-        private static void OnExit(object sender, ConsoleCancelEventArgs args)
+        private static void OnExit(object? sender, ConsoleCancelEventArgs args)
         {
             Closing.Set();
         }

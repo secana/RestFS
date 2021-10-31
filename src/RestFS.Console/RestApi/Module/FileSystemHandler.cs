@@ -115,7 +115,7 @@ namespace RestFS.Console.RestApi.Module
             return new Response
             {
                 ContentType = "application/json",
-                Contents    = s => { s.Write(content, 0, content.Length); },
+                Contents    = s => { s.WriteAsync(content, 0, content.Length); },
                 Headers     = attributes.ToDictionary(),
                 StatusCode  = HttpStatusCode.OK
             };
@@ -130,14 +130,14 @@ namespace RestFS.Console.RestApi.Module
             }
 
             var content    = await _storage.ReadFileAsync(file);
-            var attribures = _storage.ReadFileAttributes(file);
+            var attributes = _storage.ReadFileAttributes(file);
             _logger.LogTrace(LogEvents.Read, $"Read file: {file}");
 
             return new Response
             {
                 Contents    = s => { s.Write(content, 0, content.Length); },
                 ContentType = "application/octet-stream",
-                Headers     = attribures.ToDictionary(),
+                Headers     = attributes.ToDictionary(),
                 StatusCode  = HttpStatusCode.OK
             };
         }

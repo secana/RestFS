@@ -24,12 +24,13 @@ namespace RestFS.Console
                 LoggerFactory.Create(builder => 
                 builder.AddConsole().
                 SetMinimumLevel(LogLevel.Trace)));
-                
+            
+            Container.Register(Container.Resolve<ILoggerFactory>().CreateLogger(Container.Resolve<Config.Config>().LoggerName));
 
             Container.Register<IStorage>(
                 new Storage.Storage(Container.Resolve<Config.Config>().RootDirectory));
 
-            Container.Register<WebHost>(new WebHost(
+            Container.Register(new WebHost(
                 Container.Resolve<ILogger>(),
                 Container.Resolve<IStorage>(),
                 Container.Resolve<Config.Config>().Uri));

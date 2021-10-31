@@ -34,7 +34,7 @@ namespace RestFS.Console.RestApi.Module
                             "If a file is requested, the files deleted. If a directory is requested, the directory is deleted recursively.")
                         .Tag("File System")
                         .Response(HttpStatusCode.NoContent,
-                            r => r.Description("File or directory sucessfully deleted."))
+                            r => r.Description("File or directory successfully deleted."))
                         .Response(HttpStatusCode.NotFound, r => r.Description("File or directory not found."))
                         .Response(HttpStatusCode.BadRequest, r => r.Description("Wrong query parameter."))
                 ));
@@ -49,7 +49,7 @@ namespace RestFS.Console.RestApi.Module
                                 .Description("The directory to read the directory info for."))
                         .Summary("Read file for directory information.")
                         .Description(
-                            "Same as GET but without the body. File or directory information are retuned in the headers.")
+                            "Same as GET but without the body. File or directory information are returned in the headers.")
                         .Tag("File System")
                         .Response(HttpStatusCode.NoContent, r => r.Description("File or directory info."))
                         .Response(HttpStatusCode.NotFound, r => r.Description("File or directory not found."))

@@ -26,7 +26,7 @@ namespace RestFS.Console.RestApi
                 "RestFs",                                 //Name
                 "v1",                                     //Version
                 "REST API abstraction for a file system", //Description
-                new Contact {Url = "project url"}         //Contact Info
+                new Contact {Url = "https://github.com/secana/RestFS"} //Contact Info
             );
 
             container.Register(_logger);

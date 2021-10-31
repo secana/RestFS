@@ -9,7 +9,7 @@ namespace RestFS.Console.RestApi.Module
     {
         private const    string   ApiVersion = "/api/v1";
         private const    string   Route      = ApiVersion + "/fs";
-        private const    string   Docu       = ApiVersion + "/api-docs";
+        private const    string   Docs       = ApiVersion + "/api-docs";
         private readonly ILogger  _logger;
         private readonly IStorage _storage;
 
@@ -18,9 +18,18 @@ namespace RestFS.Console.RestApi.Module
             _logger  = logger;
             _storage = storage;
 
-            Get("/", _ => Response.AsRedirect(Docu));
+            Get("/", _ => Response.AsRedirect(Docs));
 
-            Get(Docu, _ => View["index.html"]);
+            Get(Docs, _ => {
+                var content = System.Text.Encoding.UTF8.GetBytes(System.IO.File.ReadAllText("views/index.html"));
+
+                var response = new Response {
+                    ContentType = "text/html",
+                    StatusCode = HttpStatusCode.OK,
+                    Contents = s => { s.WriteAsync(content, 0, content.Length); }
+                };
+                return response;
+            });
 
             Get(Route, async param =>
             {

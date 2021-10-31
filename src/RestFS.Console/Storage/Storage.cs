@@ -55,7 +55,9 @@ namespace RestFS.Console.Storage
         public async Task WriteFileAsync(string file, byte[] content)
         {
             var fullPath = SecurePathCombine(_rootDir, file);
-            Directory.CreateDirectory(Path.GetDirectoryName(fullPath));
+            var dir = Path.GetDirectoryName(fullPath);
+            if (dir is null) { throw new ArgumentNullException(nameof(dir)); }
+            Directory.CreateDirectory(dir);
             await File.WriteAllBytesAsync(fullPath, content);
         }
 
