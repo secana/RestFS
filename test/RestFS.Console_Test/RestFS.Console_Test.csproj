@@ -13,7 +13,7 @@
     <WarningsAsErrors />
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="LightBDD.XUnit2" Version="3.3.1" />
+    <PackageReference Include="LightBDD.XUnit2" Version="3.4.0" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.0.0" />
     <PackageReference Include="Moq">
       <Version>4.16.1</Version>
